@@ -1,28 +1,16 @@
-# 1st Choice Industrial Coatings, LLC
+# 1st Choice Industrial Coatings - Client Dashboard
 
-## Client Overview
-- **Company**: 1st Choice Industrial Coatings, LLC
-- **Location**: Itasca, TX
-- **Industry**: Conklin Roofing Contractor
-- **Website**: www.1stchoiceindustrialcoatings.com
-- **In Business Since**: 2012 (part-time)
+Digital transformation dashboard for roofing contractor business.
 
-## Services Needed
-1. Basic liability insurance quote
-2. Website redesign
-3. Google Business optimization
-4. Social media content plan
-5. Marketing strategy for Texas market
+## Dashboard Features
 
-## Current Marketing
-- Low-level Facebook advertising
-- Direct mail (3 attempts, not successful)
+- SEO Performance Metrics
+- Comprehensive Reports
+- Action Plans
+- Progress Tracking
 
-## Project Folders
-- `/research` - Market research and competitor analysis
-- `/website` - Website audit and redesign plans
-- `/seo` - SEO reports and strategies
-- `/google-business` - Google Business profile optimization
-- `/social-media` - Social media content plans
-- `/marketing` - Marketing strategies and campaigns
-- `/docs` - Documentation and meeting notes
+## Access
+
+Live at: https://1stchoice.netlify.app
+
+Last updated: June 4, 2025 - Fixed deployment configuration
