@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>90-Day Action Plan - 1st Choice Industrial Coatings</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .action-plan-header {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+        .plan-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        .phase-card {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            border-left: 4px solid #3b82f6;
+        }
+        .phase-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        .phase-number {
+            background: #3b82f6;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+        }
+        .task-list {
+            list-style: none;
+            padding: 0;
+        }
+        .task-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid #f3f4f6;
+        }
+        .task-checkbox {
+            width: 18px;
+            height: 18px;
+            border: 2px solid #d1d5db;
+            border-radius: 4px;
+            margin-top: 2px;
+        }
+        .priority-high { border-left-color: #ef4444; }
+        .priority-medium { border-left-color: #f59e0b; }
+        .priority-low { border-left-color: #10b981; }
+        .roi-calculator {
+            background: #f8fafc;
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 3rem 0;
+        }
+        .roi-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        .roi-metric {
+            text-align: center;
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        .roi-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #1e3a8a;
+        }
+        .back-nav {
+            margin: 2rem 0;
+            text-align: center;
+        }
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: #f3f4f6;
+            color: #374151;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        .back-btn:hover {
+            background: #e5e7eb;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h1>1st Choice Industrial Coatings</h1>
+                <span class="nav-tagline">90-Day Digital Transformation Plan</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Dashboard</a></li>
+                <li><a href="#action-plan">Action Plan</a></li>
+                <li><a href="seo-metrics.html">SEO Metrics</a></li>
+                <li><a href="reports/index.html">Reports</a></li>
+                <li><a href="contact.html" class="nav-cta">Get Support</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <section class="action-plan-header">
+        <div class="container">
+            <h1>Your 90-Day Digital Transformation Action Plan</h1>
+            <p>Step-by-step roadmap to transform your online presence and capture $345K+ in monthly revenue potential</p>
+            <div class="hero-stats">
+                <div class="stat-card">
+                    <div class="stat-number">90<span> Days</span></div>
+                    <div class="stat-label">To Digital Dominance</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">47<span> Tasks</span></div>
+                    <div class="stat-label">Strategic Actions</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">$345<span>K</span></div>
+                    <div class="stat-label">Monthly Revenue Target</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ROI Calculator -->
+    <section class="roi-calculator">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 1rem;">Projected Return on Investment</h2>
+            <p style="text-align: center; color: #6b7280;">Based on industry averages and your current performance gap</p>
+            <div class="roi-grid">
+                <div class="roi-metric">
+                    <div class="roi-number">300%</div>
+                    <div class="roi-label">First Year ROI</div>
+                </div>
+                <div class="roi-metric">
+                    <div class="roi-number">1,250</div>
+                    <div class="roi-label">New Leads/Month</div>
+                </div>
+                <div class="roi-metric">
+                    <div class="roi-number">60</div>
+                    <div class="roi-label">Days to See Results</div>
+                </div>
+                <div class="roi-metric">
+                    <div class="roi-number">$4.1M</div>
+                    <div class="roi-label">Annual Revenue Potential</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Action Plan Phases -->
+    <section id="action-plan" class="reports-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>90-Day Implementation Phases</h2>
+                <p>Prioritized actions to maximize impact and ROI</p>
+            </div>
+            
+            <div class="plan-grid">
+                <!-- Phase 1: Foundation (Days 1-30) -->
+                <div class="phase-card priority-high">
+                    <div class="phase-header">
+                        <div class="phase-number">1</div>
+                        <div>
+                            <h3>Foundation Phase</h3>
+                            <p style="margin: 0; color: #6b7280;">Days 1-30 • Critical Priority</p>
+                        </div>
+                    </div>
+                    
+                    <ul class="task-list">
+                        <li class="task-item">
+                            <div class="task-checkbox"></div>
+                            <div>
+                                <strong>Install SSL Certificate</strong>
+                                <p style="margin: 0.25rem 0 0 0; font-size: 0.9rem; color: #6b7280;">Immediate trust signal and Google ranking factor</p>
+                            </div>
+                        </li>
+                        <li class="task-item">
+                            <div class="task-checkbox"></div>
+                            <div>
+                                <strong>Create Google Business Profile</strong>
+                                <p style="margin: 0.25rem 0 0 0; font-size: 0.9rem; color: #6b7280;">Essential for local search visibility</p>
+                            </div>
+                        </li>
+                        <li class="task-item">
+                            <div class="task-checkbox"></div>
+                            <div>
+                                <strong>Mobile Optimization</strong>
+                                <p style="margin: 0.25rem 0 0 0; font-size: 0.9rem; color: #6b7280;">60% of visitors use mobile devices</p>
+                            </div>
+                        </li>
+                        <li class="task-item">
+                            <div class="task-checkbox"></div>
+                            <div>
+                                <strong>Site Speed Optimization</strong>
+                                <p style="margin: 0.25rem 0 0 0; font-size: 0.9rem; color: #6b7280;">Target under 3 seconds load time</p>
+                            </div>
+                        </li>
+                        <li class="task-item">
+                            <div class="task-checkbox"></div>
+                            <div>
+                                <strong>Basic SEO Setup</strong>
+                                <p style="margin: 0.25rem 0 0 0; font-size: 0.9rem; color: #6b7280;">Title tags, meta descriptions, headers</p>
+                            </div>
+                        </li>
+                    </ul>
+                    
+                    <div style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid #f3f4f6;">
+                        <strong>Expected Impact:</strong> 40% increase in organic visibility
+                    </div>
+                </div>
+
+                <!-- Phase 2: Authority Building (Days 31-60) -->
+                <div class="phase-card priority-medium">
+                    <div class="phase-header">
+                        <div class="phase-number">2</div>
+                        <div>
+                            <h3>Authority Building</h3>
+                            <p style="margin: 0; color: #6b7280;">Days 31-60 • Medium Priority</p>
+                        </div>
+                    </div>
+                    
+                    <ul class="task-list">
+                        <li class="task-item">
+                            <div class="task-checkbox"></div>
+                            <div>
+                                <strong>Content Marketing Launch</strong>
+                                <p style="margin: 0.25rem 0 0 0; font-size: 0.9rem; color: #6b7280;">Weekly blog posts targeting key terms</p>
+                            </div>
+                        </li>
+                        <li class="task-item">
+                            <div class="task-checkbox"></div>
+                            <div>
+                                <strong>Local Citation Building</strong>
+                                <p style="margin: 0.25rem 0 0 0; font-size: 0.9rem; color: #6b7280;">25+ high-authority directory listings</p>
+                            </div>
+                        </li>
+                        <li class="task-item">
+                            <div class="task-checkbox"></div>
+                            <div>
+                                <strong>Review Generation System</strong>
+                                <p style="margin: 0.25rem 0 0 0; font-size: 0.9rem; color: #6b7280;">Automated customer review requests</p>
+                            </div>
+                        </li>
+                        <li class="task-item">
+                            <div class="task-checkbox"></div>
+                            <div>
+                                <strong>Schema Markup Implementation</strong>
+                                <p style="margin: 0.25rem 0 0 0; font-size: 0.9rem; color: #6b7280;">Rich snippets for better search results</p>
+                            </div>
+                        </li>
+                        <li class="task-item">
+                            <div class="task-checkbox"></div>
+                            <div>
+                                <strong>Social Media Presence</strong>
+                                <p style="margin: 0.25rem 0 0 0; font-size: 0.9rem; color: #6b7280;">Facebook and LinkedIn business pages</p>
+                            </div>
+                        </li>
+                    </ul>
+                    
+                    <div style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid #f3f4f6;">
+                        <strong>Expected Impact:</strong> 125% increase in organic traffic
+                    </div>
+                </div>
+
+                <!-- Phase 3: Market Domination (Days 61-90) -->
+                <div class="phase-card priority-low">
+                    <div class="phase-header">
+                        <div class="phase-number">3</div>
+                        <div>
+                            <h3>Market Domination</h3>
+                            <p style="margin: 0; color: #6b7280;">Days 61-90 • Optimization Phase</p>
+                        </div>
+                    </div>
+                    
+                    <ul class="task-list">
+                        <li class="task-item">
+                            <div class="task-checkbox"></div>
+                            <div>
+                                <strong>Advanced Analytics Setup</strong>
+                                <p style="margin: 0.25rem 0 0 0; font-size: 0.9rem; color: #6b7280;">Conversion tracking and ROI monitoring</p>
+                            </div>
+                        </li>
+                        <li class="task-item">
+                            <div class="task-checkbox"></div>
+                            <div>
+                                <strong>Competitor Analysis & Response</strong>
+                                <p style="margin: 0.25rem 0 0 0; font-size: 0.9rem; color: #6b7280;">Stay ahead of competition strategies</p>
+                            </div>
+                        </li>
+                        <li class="task-item">
+                            <div class="task-checkbox"></div>
+                            <div>
+                                <strong>Lead Nurturing System</strong>
+                                <p style="margin: 0.25rem 0 0 0; font-size: 0.9rem; color: #6b7280;">Email automation for prospect follow-up</p>
+                            </div>
+                        </li>
+                        <li class="task-item">
+                            <div class="task-checkbox"></div>
+                            <div>
+                                <strong>Video Marketing Launch</strong>
+                                <p style="margin: 0.25rem 0 0 0; font-size: 0.9rem; color: #6b7280;">Service demonstrations and testimonials</p>
+                            </div>
+                        </li>
+                        <li class="task-item">
+                            <div class="task-checkbox"></div>
+                            <div>
+                                <strong>Pay-Per-Click Advertising</strong>
+                                <p style="margin: 0.25rem 0 0 0; font-size: 0.9rem; color: #6b7280;">Targeted Google Ads for immediate leads</p>
+                            </div>
+                        </li>
+                    </ul>
+                    
+                    <div style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid #f3f4f6;">
+                        <strong>Expected Impact:</strong> Market leadership position
+                    </div>
+                </div>
+
+                <!-- Quick Wins (Ongoing) -->
+                <div class="phase-card" style="border-left-color: #10b981;">
+                    <div class="phase-header">
+                        <div class="phase-number" style="background: #10b981;">⚡</div>
+                        <div>
+                            <h3>Quick Wins</h3>
+                            <p style="margin: 0; color: #6b7280;">Immediate Actions • Start Today</p>
+                        </div>
+                    </div>
+                    
+                    <ul class="task-list">
+                        <li class="task-item">
+                            <div class="task-checkbox"></div>
+                            <div>
+                                <strong>Add Contact Info to Footer</strong>
+                                <p style="margin: 0.25rem 0 0 0; font-size: 0.9rem; color: #6b7280;">Phone, address, business hours</p>
+                            </div>
+                        </li>
+                        <li class="task-item">
+                            <div class="task-checkbox"></div>
+                            <div>
+                                <strong>Create "About Us" Page</strong>
+                                <p style="margin: 0.25rem 0 0 0; font-size: 0.9rem; color: #6b7280;">Build trust with company story</p>
+                            </div>
+                        </li>
+                        <li class="task-item">
+                            <div class="task-checkbox"></div>
+                            <div>
+                                <strong>Add Customer Testimonials</strong>
+                                <p style="margin: 0.25rem 0 0 0; font-size: 0.9rem; color: #6b7280;">Social proof from satisfied clients</p>
+                            </div>
+                        </li>
+                        <li class="task-item">
+                            <div class="task-checkbox"></div>
+                            <div>
+                                <strong>Service Area Map</strong>
+                                <p style="margin: 0.25rem 0 0 0; font-size: 0.9rem; color: #6b7280;">Show coverage area visually</p>
+                            </div>
+                        </li>
+                        <li class="task-item">
+                            <div class="task-checkbox"></div>
+                            <div>
+                                <strong>Before/After Gallery</strong>
+                                <p style="margin: 0.25rem 0 0 0; font-size: 0.9rem; color: #6b7280;">Showcase quality workmanship</p>
+                            </div>
+                        </li>
+                    </ul>
+                    
+                    <div style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid #f3f4f6;">
+                        <strong>Time Required:</strong> 2-3 hours total
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Implementation Support -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Start Your Transformation?</h2>
+                <p>Our team will guide you through every step of this 90-day plan. You don't have to do this alone.</p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="cta-primary">Get Implementation Support</a>
+                    <a href="reports/index.html" class="cta-secondary">View Detailed Reports</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Back Navigation -->
+    <div class="back-nav">
+        <a href="index.html" class="back-btn">
+            ← Back to Dashboard
+        </a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>1st Choice Industrial Coatings</h3>
+                    <p>Your partner in digital transformation and online growth.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Dashboard</a></li>
+                        <li><a href="seo-metrics.html">SEO Metrics</a></li>
+                        <li><a href="reports/index.html">Reports</a></li>
+                        <li><a href="contact.html">Get Support</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Need Help?</h4>
+                    <p>Our team is ready to help you implement these strategies and grow your business.</p>
+                    <a href="contact.html" class="footer-cta">Contact Us</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 1st Choice Industrial Coatings. Digital Transformation by Echo AI Systems.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
