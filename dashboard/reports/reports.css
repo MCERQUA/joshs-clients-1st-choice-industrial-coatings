@@ -1,0 +1,139 @@
+/* Reports Page Styles */
+.reports-hero {
+    background: linear-gradient(135deg, #1a73e8 0%, #34a853 100%);
+    color: white;
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.reports-hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.reports-hero p {
+    font-size: 1.25rem;
+    opacity: 0.9;
+}
+
+/* Reports Section */
+.reports-section {
+    padding: 5rem 0;
+}
+
+.reports-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.report-card {
+    background: white;
+    border: 2px solid var(--border);
+    border-radius: var(--radius);
+    padding: 2rem;
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition);
+    display: block;
+    text-align: center;
+}
+
+.report-card:hover {
+    border-color: var(--primary-color);
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.report-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.report-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--dark);
+}
+
+.report-card p {
+    color: var(--gray);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.report-link {
+    color: var(--primary-color);
+    font-weight: 600;
+    display: inline-block;
+    transition: var(--transition);
+}
+
+.report-card:hover .report-link {
+    transform: translateX(5px);
+}
+
+/* Resources Section */
+.resources-section {
+    padding: 5rem 0;
+    background: var(--light);
+}
+
+.resources-section h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+}
+
+.resources-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.resource-card {
+    background: white;
+    border-radius: var(--radius);
+    padding: 2rem;
+    box-shadow: var(--shadow);
+    text-align: center;
+}
+
+.resource-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: var(--dark);
+}
+
+.resource-card p {
+    color: var(--gray);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.resource-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.5rem 1.5rem;
+    border: 2px solid var(--primary-color);
+    border-radius: var(--radius);
+    display: inline-block;
+    transition: var(--transition);
+}
+
+.resource-link:hover {
+    background: var(--primary-color);
+    color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .reports-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .resources-grid {
+        grid-template-columns: 1fr;
+    }
+}
