@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEO Metrics Dashboard - 1st Choice Industrial Coatings</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <style>
+        /* SEO Metrics Specific Styles */
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .metric-card {
+            background: var(--surface-color);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .metric-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+        
+        .metric-value {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--text-color);
+            margin: 0.5rem 0;
+        }
+        
+        .metric-label {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+        
+        .metric-trend {
+            display: inline-flex;
+            align-items: center;
+            margin-top: 0.5rem;
+            font-size: 0.9rem;
+        }
+        
+        .trend-up {
+            color: #28a745;
+        }
+        
+        .trend-down {
+            color: #dc3545;
+        }
+        
+        .keywords-table {
+            width: 100%;
+            background: var(--surface-color);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            overflow: hidden;
+            margin: 2rem 0;
+        }
+        
+        .keywords-table table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .keywords-table th {
+            background: var(--primary-color);
+            color: white;
+            padding: 1rem;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        .keywords-table td {
+            padding: 1rem;
+            border-top: 1px solid var(--border-color);
+        }
+        
+        .keywords-table tr:hover {
+            background: rgba(0,0,0,0.02);
+        }
+        
+        .chart-container {
+            background: var(--surface-color);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-muted);
+        }
+        
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 2rem 0 1rem 0;
+        }
+        
+        .date-filter {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+        
+        .date-filter select {
+            padding: 0.5rem 1rem;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            background: white;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <a href="../index.html">1st Choice Industrial Coatings</a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#services">Services</a></li>
+                <li><a href="../index.html#gallery">Gallery</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+                <li><a href="seo-metrics.html" class="active">SEO Dashboard</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="dashboard-container">
+        <div class="container">
+            <div class="section-header">
+                <h1>SEO Performance Metrics</h1>
+                <div class="date-filter">
+                    <label>Time Period:</label>
+                    <select id="timePeriod">
+                        <option value="30">Last 30 Days</option>
+                        <option value="90">Last 90 Days</option>
+                        <option value="180">Last 6 Months</option>
+                        <option value="365">Last Year</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Key Metrics Grid -->
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <h3>Organic Traffic</h3>
+                    <div class="metric-value">2,847</div>
+                    <div class="metric-label">Monthly Visitors</div>
+                    <div class="metric-trend trend-up">
+                        <span>↑ 15.3%</span> from last month
+                    </div>
+                </div>
+
+                <div class="metric-card">
+                    <h3>Search Rankings</h3>
+                    <div class="metric-value">24</div>
+                    <div class="metric-label">Keywords in Top 10</div>
+                    <div class="metric-trend trend-up">
+                        <span>↑ 6</span> new rankings
+                    </div>
+                </div>
+
+                <div class="metric-card">
+                    <h3>Domain Authority</h3>
+                    <div class="metric-value">42</div>
+                    <div class="metric-label">DA Score</div>
+                    <div class="metric-trend trend-up">
+                        <span>↑ 3</span> points gained
+                    </div>
+                </div>
+
+                <div class="metric-card">
+                    <h3>Page Speed</h3>
+                    <div class="metric-value">94</div>
+                    <div class="metric-label">Mobile Score</div>
+                    <div class="metric-trend trend-up">
+                        <span>↑ 12</span> improvement
+                    </div>
+                </div>
+
+                <div class="metric-card">
+                    <h3>Backlinks</h3>
+                    <div class="metric-value">156</div>
+                    <div class="metric-label">Total Backlinks</div>
+                    <div class="metric-trend trend-up">
+                        <span>↑ 23</span> new this month
+                    </div>
+                </div>
+
+                <div class="metric-card">
+                    <h3>Click-Through Rate</h3>
+                    <div class="metric-value">3.8%</div>
+                    <div class="metric-label">Average CTR</div>
+                    <div class="metric-trend trend-up">
+                        <span>↑ 0.5%</span> increase
+                    </div>
+                </div>
+            </div>
+
+            <!-- Traffic Chart -->
+            <section>
+                <h2>Organic Traffic Trend</h2>
+                <div class="chart-container">
+                    <p>Traffic visualization chart will be displayed here</p>
+                </div>
+            </section>
+
+            <!-- Top Keywords Table -->
+            <section>
+                <h2>Top Performing Keywords</h2>
+                <div class="keywords-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Keyword</th>
+                                <th>Position</th>
+                                <th>Search Volume</th>
+                                <th>Clicks</th>
+                                <th>CTR</th>
+                                <th>Trend</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>industrial coatings toronto</td>
+                                <td>3</td>
+                                <td>520/mo</td>
+                                <td>156</td>
+                                <td>5.2%</td>
+                                <td class="trend-up">↑ 2</td>
+                            </tr>
+                            <tr>
+                                <td>powder coating services near me</td>
+                                <td>5</td>
+                                <td>380/mo</td>
+                                <td>98</td>
+                                <td>4.1%</td>
+                                <td class="trend-up">↑ 1</td>
+                            </tr>
+                            <tr>
+                                <td>metal finishing toronto</td>
+                                <td>7</td>
+                                <td>290/mo</td>
+                                <td>67</td>
+                                <td>3.8%</td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td>zinc phosphate coating</td>
+                                <td>4</td>
+                                <td>210/mo</td>
+                                <td>89</td>
+                                <td>6.7%</td>
+                                <td class="trend-up">↑ 3</td>
+                            </tr>
+                            <tr>
+                                <td>mil spec coating services</td>
+                                <td>2</td>
+                                <td>170/mo</td>
+                                <td>112</td>
+                                <td>10.5%</td>
+                                <td class="trend-up">↑ 5</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Technical SEO Status -->
+            <section>
+                <h2>Technical SEO Health</h2>
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <h3>Pages Indexed</h3>
+                        <div class="metric-value">42</div>
+                        <div class="metric-label">Total Pages</div>
+                    </div>
+
+                    <div class="metric-card">
+                        <h3>Mobile Usability</h3>
+                        <div class="metric-value">100%</div>
+                        <div class="metric-label">Pages Mobile-Friendly</div>
+                    </div>
+
+                    <div class="metric-card">
+                        <h3>Schema Markup</h3>
+                        <div class="metric-value">Active</div>
+                        <div class="metric-label">LocalBusiness Schema</div>
+                    </div>
+
+                    <div class="metric-card">
+                        <h3>XML Sitemap</h3>
+                        <div class="metric-value">Valid</div>
+                        <div class="metric-label">Last Updated: Today</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Recent SEO Activities -->
+            <section>
+                <h2>Recent SEO Activities</h2>
+                <div class="keywords-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Activity</th>
+                                <th>Impact</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Dec 15, 2024</td>
+                                <td>Added 5 new service pages</td>
+                                <td>+15% organic traffic</td>
+                                <td style="color: #28a745;">Completed</td>
+                            </tr>
+                            <tr>
+                                <td>Dec 10, 2024</td>
+                                <td>Optimized page speed</td>
+                                <td>+12 point improvement</td>
+                                <td style="color: #28a745;">Completed</td>
+                            </tr>
+                            <tr>
+                                <td>Dec 5, 2024</td>
+                                <td>Updated meta descriptions</td>
+                                <td>+0.5% CTR increase</td>
+                                <td style="color: #28a745;">Completed</td>
+                            </tr>
+                            <tr>
+                                <td>Nov 28, 2024</td>
+                                <td>Built local citations</td>
+                                <td>+23 new backlinks</td>
+                                <td style="color: #28a745;">Completed</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 1st Choice Industrial Coatings. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Add interactivity for time period filter
+        document.getElementById('timePeriod').addEventListener('change', function(e) {
+            console.log('Time period changed to:', e.target.value, 'days');
+            // In a real implementation, this would refresh the data
+        });
+    </script>
+</body>
+</html>
