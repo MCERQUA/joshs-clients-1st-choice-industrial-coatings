@@ -1,0 +1,6 @@
+# Netlify redirects
+/home              /index.html          200
+/metrics           /seo-metrics.html    200
+/plan              /action-plan.html    200
+/support           /contact.html        200
+/reports           /reports/index.html  200
