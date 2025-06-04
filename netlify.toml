@@ -1,10 +1,10 @@
 [build]
   base = ""
-  publish = "dashboard"
+  publish = "."
 
 [[redirects]]
-  from = "/*"
-  to = "/index.html"
+  from = "/"
+  to = "/dashboard/index.html"
   status = 200
 
 [[headers]]
