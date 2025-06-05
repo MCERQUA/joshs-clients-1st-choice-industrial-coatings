@@ -4,16 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Content Strategy Report - 1st Choice Industrial Coatings</title>
-    <link rel="stylesheet" href="../../css/styles.css">
-    <link rel="stylesheet" href="../../css/dashboard.css">
-    <link rel="stylesheet" href="reports.css">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         .content-section {
-            background: var(--surface-color);
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
+            background: white;
+            border-radius: 12px;
             padding: 2rem;
             margin: 2rem 0;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
         }
         
         .content-grid {
@@ -24,8 +25,8 @@
         }
         
         .content-card {
-            background: white;
-            border: 1px solid #e0e0e0;
+            background: #f8fafc;
+            border: 1px solid #e5e7eb;
             border-radius: 8px;
             padding: 1.5rem;
             transition: transform 0.3s ease;
@@ -37,17 +38,17 @@
         }
         
         .priority-high {
-            color: #dc3545;
+            color: #dc2626;
             font-weight: bold;
         }
         
         .priority-medium {
-            color: #ffc107;
+            color: #f59e0b;
             font-weight: bold;
         }
         
         .priority-low {
-            color: #28a745;
+            color: #10b981;
             font-weight: bold;
         }
         
@@ -58,11 +59,12 @@
         
         .keyword-list li {
             background: #f8f9fa;
-            padding: 0.5rem 1rem;
+            padding: 0.75rem 1rem;
             margin: 0.5rem 0;
             border-radius: 4px;
             display: flex;
             justify-content: space-between;
+            border-left: 4px solid #3b82f6;
         }
         
         .content-calendar {
@@ -72,7 +74,7 @@
         }
         
         .content-calendar th {
-            background: var(--primary-color);
+            background: #1a73e8;
             color: white;
             padding: 1rem;
             text-align: left;
@@ -80,64 +82,115 @@
         
         .content-calendar td {
             padding: 1rem;
-            border: 1px solid #e0e0e0;
+            border-bottom: 1px solid #e5e7eb;
         }
         
         .content-calendar tr:nth-child(even) {
-            background: #f8f9fa;
+            background: #f8fafc;
+        }
+
+        .report-header {
+            background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .score-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 3rem 0;
+        }
+
+        .score-card {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            border-left: 4px solid #3b82f6;
+        }
+
+        .score-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #1a73e8;
+            margin-bottom: 0.5rem;
+        }
+
+        .action-item {
+            background: #f0f9ff;
+            border: 1px solid #bae6fd;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1rem 0;
+        }
+
+        .action-item h4 {
+            color: #1e40af;
+            margin-bottom: 0.5rem;
         }
     </style>
 </head>
 <body>
+    <!-- Navigation -->
     <nav class="navbar">
-        <div class="container">
-            <div class="nav-brand">
-                <a href="../../index.html">1st Choice Industrial Coatings</a>
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h1>1st Choice Industrial Coatings</h1>
+                <span class="nav-tagline">Content Strategy Report</span>
             </div>
             <ul class="nav-menu">
-                <li><a href="../../index.html">Home</a></li>
-                <li><a href="../seo-metrics.html">SEO Dashboard</a></li>
-                <li><a href="content-strategy.html" class="active">Content Strategy</a></li>
-                <li><a href="local-seo.html">Local SEO</a></li>
+                <li><a href="../index.html">Dashboard</a></li>
+                <li><a href="../action-plan.html">Action Plan</a></li>
+                <li><a href="../seo-metrics.html">SEO Metrics</a></li>
+                <li><a href="index.html">Reports</a></li>
+                <li><a href="../contact.html" class="nav-cta">Get Support</a></li>
             </ul>
         </div>
     </nav>
 
-    <main class="dashboard-container">
+    <!-- Header Section -->
+    <section class="report-header">
         <div class="container">
             <h1>Content Strategy Report</h1>
-            <p class="subtitle">Strategic content plan to improve your roofing business visibility</p>
+            <p style="font-size: 1.2rem; margin: 1rem 0;">Strategic content plan to improve your roofing business visibility</p>
+        </div>
+    </section>
 
-            <!-- Executive Summary -->
+    <!-- Executive Summary -->
+    <section class="reports-section">
+        <div class="container">
             <div class="content-section">
                 <h2>Executive Summary</h2>
-                <p>Your roofing business in Itasca, TX is missing critical content opportunities. This strategic plan will help you capture 300+ monthly searches and establish authority in your local market.</p>
+                <p style="font-size: 1.1rem; line-height: 1.6; margin-bottom: 2rem;">Your roofing business in Itasca, TX is missing critical content opportunities. This strategic plan will help you capture 300+ monthly searches and establish authority in your local market.</p>
                 
-                <div class="metric-grid" style="margin: 2rem 0;">
-                    <div class="metric-card">
-                        <h4>Content Gap</h4>
-                        <div class="metric-value">47</div>
-                        <div class="metric-label">Missing Pages</div>
+                <div class="score-grid">
+                    <div class="score-card">
+                        <div class="score-number">47</div>
+                        <div class="score-label">Missing Pages</div>
                     </div>
-                    <div class="metric-card">
-                        <h4>Search Volume</h4>
-                        <div class="metric-value">3,200</div>
-                        <div class="metric-label">Monthly Searches</div>
+                    <div class="score-card">
+                        <div class="score-number">3,200</div>
+                        <div class="score-label">Monthly Searches</div>
                     </div>
-                    <div class="metric-card">
-                        <h4>Competition</h4>
-                        <div class="metric-value">Low</div>
-                        <div class="metric-label">Difficulty Level</div>
+                    <div class="score-card">
+                        <div class="score-number">Low</div>
+                        <div class="score-label">Competition Level</div>
                     </div>
-                    <div class="metric-card">
-                        <h4>ROI Potential</h4>
-                        <div class="metric-value">$45K</div>
-                        <div class="metric-label">Monthly Revenue</div>
+                    <div class="score-card">
+                        <div class="score-number">$45K</div>
+                        <div class="score-label">Monthly Revenue Potential</div>
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <!-- Content Pillars -->
+    <!-- Content Pillars -->
+    <section class="reports-section">
+        <div class="container">
             <div class="content-section">
                 <h2>Content Pillars</h2>
                 <div class="content-grid">
@@ -175,8 +228,12 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <!-- Priority Content Calendar -->
+    <!-- Priority Content Calendar -->
+    <section class="reports-section">
+        <div class="container">
             <div class="content-section">
                 <h2>90-Day Content Calendar</h2>
                 <table class="content-calendar">
@@ -228,39 +285,47 @@
                     </tbody>
                 </table>
             </div>
+        </div>
+    </section>
 
-            <!-- Keyword Opportunities -->
+    <!-- Keyword Opportunities -->
+    <section class="reports-section">
+        <div class="container">
             <div class="content-section">
                 <h2>Top Keyword Opportunities</h2>
                 <ul class="keyword-list">
                     <li>
                         <span>commercial roofing contractors Itasca TX</span>
-                        <span>320 searches/mo</span>
+                        <span><strong>320 searches/mo</strong></span>
                     </li>
                     <li>
                         <span>Conklin roofing systems Texas</span>
-                        <span>290 searches/mo</span>
+                        <span><strong>290 searches/mo</strong></span>
                     </li>
                     <li>
                         <span>roof coating contractors near me</span>
-                        <span>480 searches/mo</span>
+                        <span><strong>480 searches/mo</strong></span>
                     </li>
                     <li>
                         <span>industrial roof repair Ellis County</span>
-                        <span>210 searches/mo</span>
+                        <span><strong>210 searches/mo</strong></span>
                     </li>
                     <li>
                         <span>flat roof contractors Waxahachie</span>
-                        <span>170 searches/mo</span>
+                        <span><strong>170 searches/mo</strong></span>
                     </li>
                     <li>
                         <span>emergency roof repair Itasca Texas</span>
-                        <span>140 searches/mo</span>
+                        <span><strong>140 searches/mo</strong></span>
                     </li>
                 </ul>
             </div>
+        </div>
+    </section>
 
-            <!-- Content Templates -->
+    <!-- Content Templates -->
+    <section class="reports-section">
+        <div class="container">
             <div class="content-section">
                 <h2>Content Templates</h2>
                 <div class="content-grid">
@@ -304,38 +369,78 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <!-- Action Items -->
+    <!-- Action Items -->
+    <section class="reports-section">
+        <div class="container">
             <div class="content-section">
                 <h2>Immediate Action Items</h2>
-                <div class="action-list">
-                    <div class="action-item">
-                        <h4>1. Create Commercial Roofing Services Page</h4>
-                        <p>Target: "commercial roofing Itasca TX" - 320 searches/month</p>
-                        <p>Include: Service overview, process, benefits, local testimonials, clear CTAs</p>
-                    </div>
-                    
-                    <div class="action-item">
-                        <h4>2. Write Conklin Systems Guide</h4>
-                        <p>Target: "Conklin roofing contractor" - 290 searches/month</p>
-                        <p>Include: Product benefits, installation process, warranty info, cost factors</p>
-                    </div>
-                    
-                    <div class="action-item">
-                        <h4>3. Develop Location Pages</h4>
-                        <p>Create pages for: Itasca, Waxahachie, Hillsboro, Grandview</p>
-                        <p>Include: Local testimonials, service areas, driving directions</p>
-                    </div>
+                <div class="action-item">
+                    <h4>1. Create Commercial Roofing Services Page</h4>
+                    <p><strong>Target:</strong> "commercial roofing Itasca TX" - 320 searches/month</p>
+                    <p><strong>Include:</strong> Service overview, process, benefits, local testimonials, clear CTAs</p>
+                </div>
+                
+                <div class="action-item">
+                    <h4>2. Write Conklin Systems Guide</h4>
+                    <p><strong>Target:</strong> "Conklin roofing contractor" - 290 searches/month</p>
+                    <p><strong>Include:</strong> Product benefits, installation process, warranty info, cost factors</p>
+                </div>
+                
+                <div class="action-item">
+                    <h4>3. Develop Location Pages</h4>
+                    <p><strong>Create pages for:</strong> Itasca, Waxahachie, Hillsboro, Grandview</p>
+                    <p><strong>Include:</strong> Local testimonials, service areas, driving directions</p>
                 </div>
             </div>
         </div>
-    </main>
+    </section>
 
+    <!-- Next Steps -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Implement Your Content Strategy?</h2>
+                <p>Start creating content that drives traffic and generates leads for your roofing business.</p>
+                <div class="cta-buttons">
+                    <a href="../action-plan.html" class="cta-primary">View Action Plan</a>
+                    <a href="../contact.html" class="cta-secondary">Get Content Help</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 1st Choice Industrial Coatings. All rights reserved.</p>
-            <p>Professional Roofing Solutions in Itasca, TX</p>
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>1st Choice Industrial Coatings</h3>
+                    <p>Your partner in digital transformation and online growth.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="../index.html">Dashboard</a></li>
+                        <li><a href="../seo-metrics.html">SEO Metrics</a></li>
+                        <li><a href="../action-plan.html">Action Plan</a></li>
+                        <li><a href="../contact.html">Get Support</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Need Help?</h4>
+                    <p>Our team is ready to help you implement these strategies and grow your business.</p>
+                    <a href="../contact.html" class="footer-cta">Contact Us</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 1st Choice Industrial Coatings. Digital Transformation by Echo AI Systems.</p>
+            </div>
         </div>
     </footer>
+
+    <script src="../script.js"></script>
 </body>
 </html>
