@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local SEO Report - 1st Choice Industrial Coatings</title>
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="../../css/dashboard.css">
+    <style>
+        .local-section {
+            background: var(--surface-color);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .map-container {
+            background: #f0f0f0;
+            height: 400px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            margin: 2rem 0;
+        }
+        
+        .competitor-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .competitor-card {
+            background: white;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 1.5rem;
+            position: relative;
+        }
+        
+        .competitor-rank {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: var(--primary-color);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+        
+        .citation-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .citation-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 1rem;
+            border: 1px solid #e0e0e0;
+            border-radius: 4px;
+            margin: 0.5rem 0;
+        }
+        
+        .citation-status {
+            font-weight: bold;
+        }
+        
+        .status-complete {
+            color: #28a745;
+        }
+        
+        .status-pending {
+            color: #ffc107;
+        }
+        
+        .status-missing {
+            color: #dc3545;
+        }
+        
+        .checklist-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .checklist-card {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 1.5rem;
+        }
+        
+        .checklist-item {
+            display: flex;
+            align-items: center;
+            margin: 0.5rem 0;
+        }
+        
+        .checklist-item input[type="checkbox"] {
+            margin-right: 0.5rem;
+        }
+        
+        .progress-bar {
+            background: #e0e0e0;
+            height: 30px;
+            border-radius: 15px;
+            overflow: hidden;
+            margin: 1rem 0;
+        }
+        
+        .progress-fill {
+            background: var(--primary-color);
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            transition: width 0.3s ease;
+        }
+        
+        .location-card {
+            background: white;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1rem 0;
+        }
+        
+        .metric-highlight {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: center;
+            margin: 2rem 0;
+        }
+        
+        .metric-highlight h3 {
+            font-size: 3rem;
+            margin: 0.5rem 0;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <a href="../../index.html">1st Choice Industrial Coatings</a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="../seo-metrics.html">SEO Dashboard</a></li>
+                <li><a href="content-strategy.html">Content Strategy</a></li>
+                <li><a href="local-seo.html" class="active">Local SEO</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="dashboard-container">
+        <div class="container">
+            <h1>Local SEO Report</h1>
+            <p class="subtitle">Dominate roofing searches in Itasca and Ellis County</p>
+
+            <!-- Local SEO Score -->
+            <div class="metric-highlight">
+                <h2>Local SEO Score</h2>
+                <h3>42/100</h3>
+                <p>Significant improvement needed to compete locally</p>
+            </div>
+
+            <!-- Key Local Metrics -->
+            <div class="local-section">
+                <h2>Local Search Performance</h2>
+                <div class="metric-grid">
+                    <div class="metric-card">
+                        <h4>Google Business Profile</h4>
+                        <div class="metric-value">Not Claimed</div>
+                        <div class="metric-label">Critical Issue</div>
+                        <div class="metric-trend trend-down">Missing 70% of searches</div>
+                    </div>
+                    
+                    <div class="metric-card">
+                        <h4>Local Citations</h4>
+                        <div class="metric-value">12/50</div>
+                        <div class="metric-label">Active Citations</div>
+                        <div class="metric-trend">38 Missing</div>
+                    </div>
+                    
+                    <div class="metric-card">
+                        <h4>Reviews</h4>
+                        <div class="metric-value">0</div>
+                        <div class="metric-label">Google Reviews</div>
+                        <div class="metric-trend trend-down">Competitors avg: 24</div>
+                    </div>
+                    
+                    <div class="metric-card">
+                        <h4>Local Pack Ranking</h4>
+                        <div class="metric-value">Not Listed</div>
+                        <div class="metric-label">Map Results</div>
+                        <div class="metric-trend trend-down">0 visibility</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service Area Map -->
+            <div class="local-section">
+                <h2>Service Area Coverage</h2>
+                <div class="map-container">
+                    <p>Service area map: Itasca, Waxahachie, Hillsboro, Grandview</p>
+                </div>
+                
+                <div class="location-grid">
+                    <div class="location-card">
+                        <h4>Primary Service Area</h4>
+                        <ul>
+                            <li><strong>Itasca, TX</strong> - Headquarters</li>
+                            <li>Population: 1,700</li>
+                            <li>Businesses: 150+</li>
+                            <li>Competition: Low</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="location-card">
+                        <h4>Secondary Markets</h4>
+                        <ul>
+                            <li><strong>Waxahachie</strong> - 15 miles</li>
+                            <li><strong>Hillsboro</strong> - 12 miles</li>
+                            <li><strong>Grandview</strong> - 8 miles</li>
+                            <li><strong>Whitney</strong> - 20 miles</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Competitor Analysis -->
+            <div class="local-section">
+                <h2>Local Competitor Analysis</h2>
+                <div class="competitor-grid">
+                    <div class="competitor-card">
+                        <div class="competitor-rank">1</div>
+                        <h4>ABC Roofing Solutions</h4>
+                        <ul>
+                            <li>Google Reviews: 47 (4.8★)</li>
+                            <li>Citations: 45+</li>
+                            <li>Website: Yes (Mobile-friendly)</li>
+                            <li>Google Posts: Weekly</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="competitor-card">
+                        <div class="competitor-rank">2</div>
+                        <h4>Texas Star Roofing</h4>
+                        <ul>
+                            <li>Google Reviews: 32 (4.6★)</li>
+                            <li>Citations: 38+</li>
+                            <li>Website: Yes</li>
+                            <li>Google Posts: Monthly</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="competitor-card">
+                        <div class="competitor-rank">3</div>
+                        <h4>Ellis County Roofers</h4>
+                        <ul>
+                            <li>Google Reviews: 21 (4.7★)</li>
+                            <li>Citations: 30+</li>
+                            <li>Website: Basic</li>
+                            <li>Google Posts: Rarely</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Citation Audit -->
+            <div class="local-section">
+                <h2>Citation Audit</h2>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 24%;">24% Complete</div>
+                </div>
+                
+                <ul class="citation-list">
+                    <li class="citation-item">
+                        <span>Google Business Profile</span>
+                        <span class="citation-status status-missing">Not Claimed</span>
+                    </li>
+                    <li class="citation-item">
+                        <span>Bing Places</span>
+                        <span class="citation-status status-missing">Missing</span>
+                    </li>
+                    <li class="citation-item">
+                        <span>Apple Maps</span>
+                        <span class="citation-status status-missing">Missing</span>
+                    </li>
+                    <li class="citation-item">
+                        <span>Facebook Business</span>
+                        <span class="citation-status status-pending">Incomplete</span>
+                    </li>
+                    <li class="citation-item">
+                        <span>Yelp</span>
+                        <span class="citation-status status-missing">Missing</span>
+                    </li>
+                    <li class="citation-item">
+                        <span>HomeAdvisor</span>
+                        <span class="citation-status status-complete">Listed</span>
+                    </li>
+                    <li class="citation-item">
+                        <span>Angie's List</span>
+                        <span class="citation-status status-missing">Missing</span>
+                    </li>
+                    <li class="citation-item">
+                        <span>BBB</span>
+                        <span class="citation-status status-complete">A+ Rating</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Action Plan -->
+            <div class="local-section">
+                <h2>90-Day Local SEO Action Plan</h2>
+                <div class="checklist-grid">
+                    <div class="checklist-card">
+                        <h3>Month 1: Foundation</h3>
+                        <div class="checklist-item">
+                            <input type="checkbox" id="gbp">
+                            <label for="gbp">Claim & optimize Google Business Profile</label>
+                        </div>
+                        <div class="checklist-item">
+                            <input type="checkbox" id="nap">
+                            <label for="nap">Standardize NAP across all platforms</label>
+                        </div>
+                        <div class="checklist-item">
+                            <input type="checkbox" id="photos">
+                            <label for="photos">Add 20+ photos to GBP</label>
+                        </div>
+                        <div class="checklist-item">
+                            <input type="checkbox" id="categories">
+                            <label for="categories">Set primary & secondary categories</label>
+                        </div>
+                    </div>
+                    
+                    <div class="checklist-card">
+                        <h3>Month 2: Citations</h3>
+                        <div class="checklist-item">
+                            <input type="checkbox" id="top20">
+                            <label for="top20">Build top 20 citations</label>
+                        </div>
+                        <div class="checklist-item">
+                            <input type="checkbox" id="industry">
+                            <label for="industry">List on roofing directories</label>
+                        </div>
+                        <div class="checklist-item">
+                            <input type="checkbox" id="local">
+                            <label for="local">Join local business directories</label>
+                        </div>
+                        <div class="checklist-item">
+                            <input type="checkbox" id="chamber">
+                            <label for="chamber">Join Chamber of Commerce</label>
+                        </div>
+                    </div>
+                    
+                    <div class="checklist-card">
+                        <h3>Month 3: Reviews & Content</h3>
+                        <div class="checklist-item">
+                            <input type="checkbox" id="review-system">
+                            <label for="review-system">Implement review request system</label>
+                        </div>
+                        <div class="checklist-item">
+                            <input type="checkbox" id="first10">
+                            <label for="first10">Get first 10 Google reviews</label>
+                        </div>
+                        <div class="checklist-item">
+                            <input type="checkbox" id="posts">
+                            <label for="posts">Weekly Google Posts</label>
+                        </div>
+                        <div class="checklist-item">
+                            <input type="checkbox" id="location-pages">
+                            <label for="location-pages">Create location pages</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Revenue Impact -->
+            <div class="local-section">
+                <h2>Revenue Impact Projection</h2>
+                <div class="metric-grid">
+                    <div class="metric-card">
+                        <h4>Current Local Visibility</h4>
+                        <div class="metric-value">5%</div>
+                        <div class="metric-label">Of local searches</div>
+                    </div>
+                    
+                    <div class="metric-card">
+                        <h4>Projected After 90 Days</h4>
+                        <div class="metric-value">65%</div>
+                        <div class="metric-label">Of local searches</div>
+                    </div>
+                    
+                    <div class="metric-card">
+                        <h4>Monthly Lead Increase</h4>
+                        <div class="metric-value">+45</div>
+                        <div class="metric-label">New leads/month</div>
+                    </div>
+                    
+                    <div class="metric-card">
+                        <h4>Revenue Opportunity</h4>
+                        <div class="metric-value">$135K</div>
+                        <div class="metric-label">Additional monthly revenue</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Immediate Actions -->
+            <div class="local-section">
+                <h2>Start Today - Quick Wins</h2>
+                <div class="action-grid">
+                    <div class="action-card">
+                        <h4>1. Claim Google Business Profile</h4>
+                        <p>Takes 15 minutes. Instantly appear in map searches.</p>
+                        <a href="https://business.google.com" target="_blank" class="btn btn-primary">Claim Now</a>
+                    </div>
+                    
+                    <div class="action-card">
+                        <h4>2. Add Business Hours</h4>
+                        <p>Let customers know when you're available.</p>
+                        <a href="#" class="btn btn-secondary">Add Hours</a>
+                    </div>
+                    
+                    <div class="action-card">
+                        <h4>3. Upload Photos</h4>
+                        <p>Show your best work. Profiles with photos get 42% more clicks.</p>
+                        <a href="#" class="btn btn-secondary">Upload Photos</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 1st Choice Industrial Coatings. All rights reserved.</p>
+            <p>Professional Roofing Solutions in Itasca, TX</p>
+        </div>
+    </footer>
+
+    <script>
+        // Add interactivity to checkboxes
+        document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+            checkbox.addEventListener('change', function() {
+                if (this.checked) {
+                    this.parentElement.style.textDecoration = 'line-through';
+                    this.parentElement.style.opacity = '0.6';
+                } else {
+                    this.parentElement.style.textDecoration = 'none';
+                    this.parentElement.style.opacity = '1';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
