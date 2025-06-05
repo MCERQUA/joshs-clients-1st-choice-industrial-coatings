@@ -3,9 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>1st Choice Industrial Coatings - Dashboard</title>
+    <title>1st Choice Industrial Coatings - Professional Roofing Solutions</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/dashboard.css">
+    <style>
+        .strategy-section {
+            padding: 4rem 0;
+            background: #f8f9fa;
+        }
+        
+        .strategy-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .strategy-card {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+        }
+        
+        .strategy-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+        }
+        
+        .strategy-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .strategy-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+        
+        .strategy-card p {
+            color: #666;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+        
+        .strategy-features {
+            list-style: none;
+            padding: 0;
+            text-align: left;
+            margin-bottom: 2rem;
+        }
+        
+        .strategy-features li {
+            padding: 0.5rem 0;
+            color: #555;
+        }
+        
+        .strategy-features li:before {
+            content: "✓ ";
+            color: #28a745;
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+        
+        .strategy-btn {
+            background: #1a73e8;
+            color: white;
+            padding: 0.75rem 2rem;
+            border-radius: 6px;
+            text-decoration: none;
+            display: inline-block;
+            font-weight: 500;
+            transition: background 0.3s ease;
+        }
+        
+        .strategy-btn:hover {
+            background: #1557b0;
+        }
+    </style>
 </head>
 <body>
     <nav class="navbar">
@@ -16,8 +94,8 @@
             </div>
             <ul class="nav-menu">
                 <li><a href="#dashboard">Dashboard</a></li>
+                <li><a href="#strategies">Strategies</a></li>
                 <li><a href="#services">Services</a></li>
-                <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
@@ -58,6 +136,39 @@
                         <div class="metric-value">$45K</div>
                         <div class="metric-label">Potential This Quarter</div>
                         <div class="metric-change positive">+22%</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="strategies" class="strategy-section">
+            <div class="container">
+                <h2 style="text-align: center; margin-bottom: 3rem;">Growth Strategies</h2>
+                <div class="strategy-grid">
+                    <div class="strategy-card">
+                        <div class="strategy-icon">📍</div>
+                        <h3>Local SEO Strategy</h3>
+                        <p>Step-by-step plan to dominate local searches and Google Maps.</p>
+                        <ul class="strategy-features">
+                            <li>Google Business Setup</li>
+                            <li>Citation Building Plan</li>
+                            <li>Review Generation</li>
+                            <li>Local Content Strategy</li>
+                        </ul>
+                        <a href="dashboard/reports/local-seo.html" class="strategy-btn">Local Domination Plan</a>
+                    </div>
+                    
+                    <div class="strategy-card">
+                        <div class="strategy-icon">📝</div>
+                        <h3>Content Strategy</h3>
+                        <p>90-day content roadmap to establish authority and attract customers.</p>
+                        <ul class="strategy-features">
+                            <li>Content Calendar</li>
+                            <li>Blog Topic Ideas</li>
+                            <li>Service Page Templates</li>
+                            <li>SEO Writing Guide</li>
+                        </ul>
+                        <a href="dashboard/reports/content-strategy.html" class="strategy-btn">Content Roadmap</a>
                     </div>
                 </div>
             </div>
