@@ -4,16 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Local SEO Report - 1st Choice Industrial Coatings</title>
-    <link rel="stylesheet" href="../../css/styles.css">
-    <link rel="stylesheet" href="../../css/dashboard.css">
-    <link rel="stylesheet" href="reports.css">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         .local-section {
-            background: var(--surface-color);
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
+            background: white;
+            border-radius: 12px;
             padding: 2rem;
             margin: 2rem 0;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
         }
         
         .map-container {
@@ -35,8 +36,8 @@
         }
         
         .competitor-card {
-            background: white;
-            border: 1px solid #e0e0e0;
+            background: #f8fafc;
+            border: 1px solid #e5e7eb;
             border-radius: 8px;
             padding: 1.5rem;
             position: relative;
@@ -46,7 +47,7 @@
             position: absolute;
             top: 1rem;
             right: 1rem;
-            background: var(--primary-color);
+            background: #1a73e8;
             color: white;
             width: 40px;
             height: 40px;
@@ -66,9 +67,10 @@
             display: flex;
             justify-content: space-between;
             padding: 1rem;
-            border: 1px solid #e0e0e0;
+            border: 1px solid #e5e7eb;
             border-radius: 4px;
             margin: 0.5rem 0;
+            background: #f8fafc;
         }
         
         .citation-status {
@@ -76,15 +78,15 @@
         }
         
         .status-complete {
-            color: #28a745;
+            color: #10b981;
         }
         
         .status-pending {
-            color: #ffc107;
+            color: #f59e0b;
         }
         
         .status-missing {
-            color: #dc3545;
+            color: #dc2626;
         }
         
         .checklist-grid {
@@ -98,20 +100,25 @@
             background: #f8f9fa;
             border-radius: 8px;
             padding: 1.5rem;
+            border: 1px solid #e5e7eb;
         }
         
         .checklist-item {
             display: flex;
             align-items: center;
             margin: 0.5rem 0;
+            padding: 0.5rem 0;
         }
         
         .checklist-item input[type="checkbox"] {
-            margin-right: 0.5rem;
+            margin-right: 0.75rem;
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
         }
         
         .progress-bar {
-            background: #e0e0e0;
+            background: #e5e7eb;
             height: 30px;
             border-radius: 15px;
             overflow: hidden;
@@ -119,7 +126,7 @@
         }
         
         .progress-fill {
-            background: var(--primary-color);
+            background: #dc2626;
             height: 100%;
             display: flex;
             align-items: center;
@@ -130,90 +137,199 @@
         }
         
         .location-card {
-            background: white;
-            border: 1px solid #e0e0e0;
+            background: #f8fafc;
+            border: 1px solid #e5e7eb;
             border-radius: 8px;
             padding: 1.5rem;
             margin: 1rem 0;
         }
         
         .metric-highlight {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #dc2626 0%, #ef4444 100%);
             color: white;
-            padding: 2rem;
-            border-radius: 8px;
+            padding: 3rem;
+            border-radius: 12px;
             text-align: center;
             margin: 2rem 0;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
         }
         
         .metric-highlight h3 {
-            font-size: 3rem;
+            font-size: 4rem;
             margin: 0.5rem 0;
+            font-weight: 700;
+        }
+
+        .report-header {
+            background: linear-gradient(135deg, #dc2626 0%, #ef4444 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .score-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 3rem 0;
+        }
+
+        .score-card {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            border-left: 4px solid #ef4444;
+        }
+
+        .score-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #dc2626;
+            margin-bottom: 0.5rem;
+        }
+
+        .action-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .action-card {
+            background: #f8fafc;
+            border-radius: 8px;
+            padding: 1.5rem;
+            text-align: center;
+            border: 1px solid #e5e7eb;
+        }
+
+        .action-card h4 {
+            color: #1f2937;
+            margin-bottom: 1rem;
+        }
+
+        .action-card p {
+            color: #6b7280;
+            margin-bottom: 1.5rem;
+        }
+
+        .btn-primary {
+            background: #1a73e8;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background: #1557b0;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: #6b7280;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        .btn-secondary:hover {
+            background: #4b5563;
+        }
+
+        .location-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
         }
     </style>
 </head>
 <body>
+    <!-- Navigation -->
     <nav class="navbar">
-        <div class="container">
-            <div class="nav-brand">
-                <a href="../../index.html">1st Choice Industrial Coatings</a>
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h1>1st Choice Industrial Coatings</h1>
+                <span class="nav-tagline">Local SEO Report</span>
             </div>
             <ul class="nav-menu">
-                <li><a href="../../index.html">Home</a></li>
-                <li><a href="../seo-metrics.html">SEO Dashboard</a></li>
-                <li><a href="content-strategy.html">Content Strategy</a></li>
-                <li><a href="local-seo.html" class="active">Local SEO</a></li>
+                <li><a href="../index.html">Dashboard</a></li>
+                <li><a href="../action-plan.html">Action Plan</a></li>
+                <li><a href="../seo-metrics.html">SEO Metrics</a></li>
+                <li><a href="index.html">Reports</a></li>
+                <li><a href="../contact.html" class="nav-cta">Get Support</a></li>
             </ul>
         </div>
     </nav>
 
-    <main class="dashboard-container">
+    <!-- Header Section -->
+    <section class="report-header">
         <div class="container">
             <h1>Local SEO Report</h1>
-            <p class="subtitle">Dominate roofing searches in Itasca and Ellis County</p>
+            <p style="font-size: 1.2rem; margin: 1rem 0;">Dominate roofing searches in Itasca and Ellis County</p>
+        </div>
+    </section>
 
-            <!-- Local SEO Score -->
+    <!-- Local SEO Score -->
+    <section class="reports-section">
+        <div class="container">
             <div class="metric-highlight">
                 <h2>Local SEO Score</h2>
                 <h3>42/100</h3>
                 <p>Significant improvement needed to compete locally</p>
             </div>
+        </div>
+    </section>
 
-            <!-- Key Local Metrics -->
+    <!-- Key Local Metrics -->
+    <section class="reports-section">
+        <div class="container">
             <div class="local-section">
                 <h2>Local Search Performance</h2>
-                <div class="metric-grid">
-                    <div class="metric-card">
+                <div class="score-grid">
+                    <div class="score-card">
                         <h4>Google Business Profile</h4>
-                        <div class="metric-value">Not Claimed</div>
-                        <div class="metric-label">Critical Issue</div>
-                        <div class="metric-trend trend-down">Missing 70% of searches</div>
+                        <div class="score-number">Not Claimed</div>
+                        <div class="score-label">Critical Issue</div>
+                        <div style="color: #dc2626; font-weight: 600;">Missing 70% of searches</div>
                     </div>
                     
-                    <div class="metric-card">
+                    <div class="score-card">
                         <h4>Local Citations</h4>
-                        <div class="metric-value">12/50</div>
-                        <div class="metric-label">Active Citations</div>
-                        <div class="metric-trend">38 Missing</div>
+                        <div class="score-number">12/50</div>
+                        <div class="score-label">Active Citations</div>
+                        <div style="color: #f59e0b; font-weight: 600;">38 Missing</div>
                     </div>
                     
-                    <div class="metric-card">
+                    <div class="score-card">
                         <h4>Reviews</h4>
-                        <div class="metric-value">0</div>
-                        <div class="metric-label">Google Reviews</div>
-                        <div class="metric-trend trend-down">Competitors avg: 24</div>
+                        <div class="score-number">0</div>
+                        <div class="score-label">Google Reviews</div>
+                        <div style="color: #dc2626; font-weight: 600;">Competitors avg: 24</div>
                     </div>
                     
-                    <div class="metric-card">
+                    <div class="score-card">
                         <h4>Local Pack Ranking</h4>
-                        <div class="metric-value">Not Listed</div>
-                        <div class="metric-label">Map Results</div>
-                        <div class="metric-trend trend-down">0 visibility</div>
+                        <div class="score-number">Not Listed</div>
+                        <div class="score-label">Map Results</div>
+                        <div style="color: #dc2626; font-weight: 600;">0 visibility</div>
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <!-- Service Area Map -->
+    <!-- Service Area Map -->
+    <section class="reports-section">
+        <div class="container">
             <div class="local-section">
                 <h2>Service Area Coverage</h2>
                 <div class="map-container">
@@ -242,47 +358,55 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <!-- Competitor Analysis -->
+    <!-- Competitor Analysis -->
+    <section class="reports-section">
+        <div class="container">
             <div class="local-section">
                 <h2>Local Competitor Analysis</h2>
                 <div class="competitor-grid">
                     <div class="competitor-card">
                         <div class="competitor-rank">1</div>
                         <h4>ABC Roofing Solutions</h4>
-                        <ul>
-                            <li>Google Reviews: 47 (4.8★)</li>
-                            <li>Citations: 45+</li>
-                            <li>Website: Yes (Mobile-friendly)</li>
-                            <li>Google Posts: Weekly</li>
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="padding: 0.25rem 0;">Google Reviews: 47 (4.8★)</li>
+                            <li style="padding: 0.25rem 0;">Citations: 45+</li>
+                            <li style="padding: 0.25rem 0;">Website: Yes (Mobile-friendly)</li>
+                            <li style="padding: 0.25rem 0;">Google Posts: Weekly</li>
                         </ul>
                     </div>
                     
                     <div class="competitor-card">
                         <div class="competitor-rank">2</div>
                         <h4>Texas Star Roofing</h4>
-                        <ul>
-                            <li>Google Reviews: 32 (4.6★)</li>
-                            <li>Citations: 38+</li>
-                            <li>Website: Yes</li>
-                            <li>Google Posts: Monthly</li>
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="padding: 0.25rem 0;">Google Reviews: 32 (4.6★)</li>
+                            <li style="padding: 0.25rem 0;">Citations: 38+</li>
+                            <li style="padding: 0.25rem 0;">Website: Yes</li>
+                            <li style="padding: 0.25rem 0;">Google Posts: Monthly</li>
                         </ul>
                     </div>
                     
                     <div class="competitor-card">
                         <div class="competitor-rank">3</div>
                         <h4>Ellis County Roofers</h4>
-                        <ul>
-                            <li>Google Reviews: 21 (4.7★)</li>
-                            <li>Citations: 30+</li>
-                            <li>Website: Basic</li>
-                            <li>Google Posts: Rarely</li>
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="padding: 0.25rem 0;">Google Reviews: 21 (4.7★)</li>
+                            <li style="padding: 0.25rem 0;">Citations: 30+</li>
+                            <li style="padding: 0.25rem 0;">Website: Basic</li>
+                            <li style="padding: 0.25rem 0;">Google Posts: Rarely</li>
                         </ul>
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <!-- Citation Audit -->
+    <!-- Citation Audit -->
+    <section class="reports-section">
+        <div class="container">
             <div class="local-section">
                 <h2>Citation Audit</h2>
                 <div class="progress-bar">
@@ -324,8 +448,12 @@
                     </li>
                 </ul>
             </div>
+        </div>
+    </section>
 
-            <!-- Action Plan -->
+    <!-- Action Plan -->
+    <section class="reports-section">
+        <div class="container">
             <div class="local-section">
                 <h2>90-Day Local SEO Action Plan</h2>
                 <div class="checklist-grid">
@@ -390,70 +518,115 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <!-- Revenue Impact -->
+    <!-- Revenue Impact -->
+    <section class="reports-section">
+        <div class="container">
             <div class="local-section">
                 <h2>Revenue Impact Projection</h2>
-                <div class="metric-grid">
-                    <div class="metric-card">
+                <div class="score-grid">
+                    <div class="score-card">
                         <h4>Current Local Visibility</h4>
-                        <div class="metric-value">5%</div>
-                        <div class="metric-label">Of local searches</div>
+                        <div class="score-number">5%</div>
+                        <div class="score-label">Of local searches</div>
                     </div>
                     
-                    <div class="metric-card">
+                    <div class="score-card">
                         <h4>Projected After 90 Days</h4>
-                        <div class="metric-value">65%</div>
-                        <div class="metric-label">Of local searches</div>
+                        <div class="score-number">65%</div>
+                        <div class="score-label">Of local searches</div>
                     </div>
                     
-                    <div class="metric-card">
+                    <div class="score-card">
                         <h4>Monthly Lead Increase</h4>
-                        <div class="metric-value">+45</div>
-                        <div class="metric-label">New leads/month</div>
+                        <div class="score-number">+45</div>
+                        <div class="score-label">New leads/month</div>
                     </div>
                     
-                    <div class="metric-card">
+                    <div class="score-card">
                         <h4>Revenue Opportunity</h4>
-                        <div class="metric-value">$135K</div>
-                        <div class="metric-label">Additional monthly revenue</div>
+                        <div class="score-number">$135K</div>
+                        <div class="score-label">Additional monthly revenue</div>
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <!-- Immediate Actions -->
+    <!-- Immediate Actions -->
+    <section class="reports-section">
+        <div class="container">
             <div class="local-section">
                 <h2>Start Today - Quick Wins</h2>
                 <div class="action-grid">
                     <div class="action-card">
                         <h4>1. Claim Google Business Profile</h4>
                         <p>Takes 15 minutes. Instantly appear in map searches.</p>
-                        <a href="https://business.google.com" target="_blank" class="btn btn-primary">Claim Now</a>
+                        <a href="https://business.google.com" target="_blank" class="btn-primary">Claim Now</a>
                     </div>
                     
                     <div class="action-card">
                         <h4>2. Add Business Hours</h4>
                         <p>Let customers know when you're available.</p>
-                        <a href="#" class="btn btn-secondary">Add Hours</a>
+                        <a href="#" class="btn-secondary">Add Hours</a>
                     </div>
                     
                     <div class="action-card">
                         <h4>3. Upload Photos</h4>
                         <p>Show your best work. Profiles with photos get 42% more clicks.</p>
-                        <a href="#" class="btn btn-secondary">Upload Photos</a>
+                        <a href="#" class="btn-secondary">Upload Photos</a>
                     </div>
                 </div>
             </div>
         </div>
-    </main>
+    </section>
 
+    <!-- Next Steps -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Dominate Local Search?</h2>
+                <p>Let's get your business found by customers in Itasca and Ellis County.</p>
+                <div class="cta-buttons">
+                    <a href="../action-plan.html" class="cta-primary">Start 90-Day Plan</a>
+                    <a href="../contact.html" class="cta-secondary">Get Local SEO Help</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 1st Choice Industrial Coatings. All rights reserved.</p>
-            <p>Professional Roofing Solutions in Itasca, TX</p>
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>1st Choice Industrial Coatings</h3>
+                    <p>Your partner in digital transformation and online growth.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="../index.html">Dashboard</a></li>
+                        <li><a href="../seo-metrics.html">SEO Metrics</a></li>
+                        <li><a href="../action-plan.html">Action Plan</a></li>
+                        <li><a href="../contact.html">Get Support</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Need Help?</h4>
+                    <p>Our team is ready to help you implement these strategies and grow your business.</p>
+                    <a href="../contact.html" class="footer-cta">Contact Us</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 1st Choice Industrial Coatings. Digital Transformation by Echo AI Systems.</p>
+            </div>
         </div>
     </footer>
 
+    <script src="../script.js"></script>
     <script>
         // Add interactivity to checkboxes
         document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
