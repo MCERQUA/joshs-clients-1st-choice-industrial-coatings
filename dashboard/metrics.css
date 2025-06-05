@@ -1,0 +1,227 @@
+/* SEO Metrics Page Styles */
+
+/* Metrics Hero Section */
+.metrics-hero {
+    background: linear-gradient(135deg, #1a73e8 0%, #34a853 100%);
+    color: white;
+    padding: 5rem 0;
+    text-align: center;
+}
+
+.metrics-hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.metrics-hero p {
+    font-size: 1.25rem;
+    opacity: 0.9;
+    margin-bottom: 3rem;
+}
+
+/* Score Overview */
+.score-overview {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 3rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+/* Main Score Circle */
+.main-score {
+    text-align: center;
+}
+
+.score-circle {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 1rem;
+}
+
+.score-circle svg {
+    transform: rotate(-90deg);
+}
+
+.score-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.score-number {
+    display: block;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.score-label {
+    display: block;
+    font-size: 0.875rem;
+    opacity: 0.8;
+    margin-top: 0.5rem;
+}
+
+.score-status {
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.875rem;
+    background: rgba(255,255,255,0.2);
+}
+
+.score-status.poor {
+    background: #ea4335;
+}
+
+/* Score Breakdown */
+.score-breakdown {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.breakdown-item {
+    background: rgba(255,255,255,0.1);
+    padding: 1.5rem;
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+}
+
+.breakdown-item h3 {
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+}
+
+.progress-bar-container {
+    background: rgba(0,0,0,0.2);
+    height: 8px;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 0.5rem;
+}
+
+.progress-bar {
+    height: 100%;
+    transition: width 1s ease-out;
+    border-radius: 4px;
+}
+
+.breakdown-item .score {
+    font-size: 0.875rem;
+    font-weight: 600;
+    opacity: 0.9;
+}
+
+/* Issues Section */
+.issues-section {
+    padding: 5rem 0;
+    background: #f8f9fa;
+}
+
+.issues-section h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+}
+
+.issues-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.issue-card {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.issue-card:hover {
+    transform: translateY(-5px);
+}
+
+.issue-card.critical {
+    border-left: 4px solid #ea4335;
+}
+
+.issue-card.high {
+    border-left: 4px solid #fbbc04;
+}
+
+.issue-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.issue-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: #1f2937;
+}
+
+.issue-card p {
+    color: #6b7280;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.issue-impact {
+    font-weight: 600;
+    color: #ea4335;
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+}
+
+.fix-button {
+    display: inline-block;
+    color: #1a73e8;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.fix-button:hover {
+    color: #1557b0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .score-overview {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .metrics-hero h1 {
+        font-size: 2rem;
+    }
+    
+    .score-circle {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .score-circle svg {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .score-number {
+        font-size: 2.5rem;
+    }
+    
+    .issues-grid {
+        grid-template-columns: 1fr;
+    }
+}
